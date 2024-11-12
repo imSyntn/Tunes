@@ -1,0 +1,141 @@
+.ArtistQuerryPage {
+    .imgText {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 350px;
+            border: none;
+            border-radius: 50%;
+            margin-right: 50px;
+        }
+
+
+        .wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;
+            height: 500px;
+            filter: blur(150px) brightness(60%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .text {
+            h1 {
+                display: flex;
+                align-items: center;
+
+                svg {
+                    margin-left: 10px;
+                    fill: #2bc5b4;
+                }
+            }
+
+            p {
+                margin-block: 10px;
+            }
+        }
+
+        button {
+            background-color: #2bc5b4;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    }
+
+    h2 {
+        margin-block: 20px;
+    }
+
+    >.type {
+        margin-block: 30px;
+
+        .contentSwitcher {
+            button {
+                width: 100px;
+                height: 35px;
+                background: none;
+                border-width: 4px;
+                border-radius: 25px;
+                margin-right: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:725px) {
+    .ArtistQuerryPage {
+        .imgText {
+            img {
+                width: 40vw;
+            }
+
+            .text {
+                h1 {
+                    font-size: 25px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                h1,
+                p {
+                    text-wrap: wrap;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:450px) {
+    .ArtistQuerryPage {
+        .imgText {
+            flex-direction: column;
+            align-items: start;
+            position: relative;
+            z-index: 1;
+
+            img {
+                width: 200px;
+            }
+
+            .text {
+                margin-top: 20px;
+                position: relative;
+                width: 100%;
+                z-index: 1;
+
+                button {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin: 0px;
+                    right: 10px;
+                    margin-top: 25px;
+                    z-index: 1;
+                }
+
+                h1 {
+                    font-size: 24px;
+                    z-index: 1;
+                }
+
+                p {
+                    font-size: 15px;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}

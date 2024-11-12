@@ -1,0 +1,46 @@
+.HeaderSearchResult {
+    width: 250px;
+
+    p, h5, strong {
+        color: black !important;
+    }
+
+    >.top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        >button {
+            border: 1.5px solid #2bc5b4;
+            border-radius: 10px;
+            color: #2bc5b4;
+            font-size: 10px;
+            font-weight: 700;
+            background: transparent;
+            padding: 3px 10px;
+            cursor: pointer;
+        }
+    }
+
+    .container {
+        display: flex;
+        margin-block: 10px;
+        cursor: pointer;
+
+        img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .detaiils {
+            >p {
+                font-size: 13px;
+            }
+            >.mainName {
+                font-size: 14px;
+                font-weight: 700;
+            }
+        }
+    }
+}

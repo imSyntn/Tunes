@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Lato", sans-serif;
+  user-select: none;
+  transition: all 0.3s;
+}
+
+body {
+  min-height: 100vh;
+  scrollbar-width: 0px;
+  transition: none;
+  background-image: linear-gradient(to right, rgb(28, 28, 28) 0%, black 100%);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+body {
+  -ms-overflow-style: none;
+}
+
+/* #root {
+  padding-bottom: 0px;
+  padding-top: 62.5px;
+  padding-inline: 20px;
+  min-height: calc(100vh);
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  #root {
+      padding-inline: 20px;
+  }
+} */
+
+
+.loaderWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%,-50%);
+}
+.loader {
+  width: 65px;
+  height: 30px;
+  position: relative;
+}
+.BlackClass::before {
+  box-shadow: 0 0 0 3px inset #000000 !important;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  box-shadow: 0 0 0 3px inset #fff;
+  animation: l3 0.75s infinite alternate;
+}
+.NoDataH1 {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: 10px;
+  background: linear-gradient(45deg, #ff0000, rgb(255, 234, 1), #43ffd3, #008cff);
+  background-size: 400% 400%;
+  color: transparent;
+  background-clip: text;
+  animation: gradient 5s ease infinite;
+}
+.NoDataP {
+  font-size: 3rem;
+  >span {
+    color: red;
+  }
+}
+@keyframes l3 {
+  0% {
+    inset: 0 35px 0 0;
+  }
+  50% {
+    inset: 0 0 0 0;
+  }
+  100% {
+    inset: 0 0 0 35px;
+  }
+}

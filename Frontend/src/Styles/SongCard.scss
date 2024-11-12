@@ -1,0 +1,135 @@
+.SongCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 10px 10px;
+    border-block: 1px solid rgba(143, 143, 143, 0.304);
+    // border: none;
+    // border-radius: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    
+    >.heart {
+        // border: 1px solid red;
+        svg {
+            font-size: 25px;
+            // fill: #2bc5b4;
+                fill: rgb(255, 120, 120);
+            transition: none;
+        }
+    }
+
+    h3 {
+        width: 250px;
+        display: flex;
+        align-items: center;
+
+        >.imgWrapperInSongCard {
+            position: relative;
+
+            img {
+                margin-right: 10px;
+                height: 50px;
+                width: 50px;
+                z-index: 1;
+                border: none;
+                border-radius: 7px;
+            }
+
+            &::before {
+                content: '';
+                opacity: 0;
+                background: url('../../play-button.png') no-repeat center;
+                background-size: 40px;
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                top: 0px;
+                left: 0;
+                z-index: 2;
+                transition: all 0.3s;
+            }
+        }
+
+        >.names {
+            p {
+                display: none;
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+    }
+
+
+    h3,
+    p {
+        text-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    p {
+        width: 200px;
+    }
+    span {
+        width: 42px;
+    }
+
+    .desktopView {
+        display: block;
+    }
+
+    &:hover {
+        box-shadow: inset 0px 0px 12px 15px rgba(255, 255, 255, 0.082);
+
+        >h3>.imgWrapperInSongCard {
+            img {
+                opacity: 0;
+            }
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.playing {
+    box-shadow: inset 0px 0px 12px 15px rgba(89, 244, 255, 0.082);
+    h3 {
+        .imgWrapperInSongCard {
+            img {
+                opacity: 0;
+            }
+
+            &::before {
+                background: url('../../giphy.webp') no-repeat center;
+                background-size: 50px;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .SongCard {
+        .desktopView {
+            display: none;
+        }
+
+        h3 {
+            .names {
+                p {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .SongCard {
+        span {
+            display: none;
+        }
+    }
+}

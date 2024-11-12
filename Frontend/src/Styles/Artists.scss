@@ -1,0 +1,33 @@
+.artists, .homeArtistCont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    // justify-content: space-evenly;
+    gap: 20px;
+    >.artistCont {
+        width: fit-content;
+        cursor: pointer;
+        img {
+            border-radius: 50%;
+            height: 150px;
+            width: 150px;
+        }
+
+        p {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .artists {
+        grid-template-columns: repeat(auto-fit, 120px);
+        gap: 10px;
+        .artistCont {
+            img {
+                height: 120px;
+                width: 120px;
+            }
+        }
+    }
+}

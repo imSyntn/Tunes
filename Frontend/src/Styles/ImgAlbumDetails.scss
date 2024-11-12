@@ -1,0 +1,66 @@
+.img-albumDetails {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    >img {
+        width: 250px;
+        margin-right: 30px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 15px;
+    }
+
+    .wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 500px;
+        filter: blur(150px) brightness(60%);
+        z-index: -1;
+    }
+
+    >.albumDetails {
+        p {
+            margin-block: 10px;
+        }
+
+        .btns {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+
+            button {
+                background-color: #2bc5b4;
+                padding: 10px 30px;
+                border: none;
+                border-radius: 50px;
+                font-size: 20px;
+                letter-spacing: 2px;
+                margin-right: 20px;
+                font-weight: 700;
+                cursor: pointer;
+            }
+
+            .heart {
+                cursor: pointer;
+                svg {
+                    font-size: 30px;
+                    fill: rgb(255, 120, 120);
+                    transition: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .img-albumDetails {
+        h1 {
+            font-size: 26px;
+        }
+    }
+}

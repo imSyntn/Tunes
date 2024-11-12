@@ -1,0 +1,51 @@
+.SearchQuerryPage {
+    padding-top: 50px;
+
+    >h1 {
+        margin-bottom: 20px;
+        font-weight: 400;
+
+        span {
+            font-weight: 600;
+            letter-spacing: 1px;
+            background-image: linear-gradient(120deg, #84fab0, #8fd3f4);
+            color: transparent;
+            background-clip: text;
+        }
+    }
+
+    >.grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 150px);
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+
+    >.searchQuerryContainer {
+        >p {
+            width: 100%;
+            text-align: center;
+            margin-block: 20px;
+        }
+
+        >.artistCont {
+            width: fit-content;
+            // width: 150px;
+            // height: 240.8px;
+            // overflow-y: hidden;
+            cursor: pointer;
+
+            img {
+                border-radius: 50%;
+                height: 150px;
+                width: 150px;
+            }
+
+            p {
+                margin-top: 10px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+    }
+}

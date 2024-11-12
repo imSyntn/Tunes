@@ -1,0 +1,44 @@
+.TrendingCards {
+    width: 150px;
+    position: relative;
+    cursor: pointer;
+
+    img {
+        width: 150px;
+        height: 150px;
+        border: none;
+        border-radius: 15px;
+    }
+
+    p {
+        width: 150px;
+        text-wrap: nowrap;
+        overflow: hidden;
+        text-align: center;
+        &:nth-of-type(2) {
+            color: rgb(167, 167, 167);
+        }
+    }
+
+    &::before {
+        content: '';
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: url('../../../up-arrow.png') no-repeat center;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    &:hover {
+        img, p {
+            opacity: 0.3;
+        }
+
+        &::before {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.SongFromAlbum {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    gap: 20px;
+    margin-bottom: 20px;
+    >.songInAlbum {
+        margin: 10px 0px;
+        width: 150px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        img {
+            height: 150px;
+            width: 150px;
+            z-index: 1;
+            border: none;
+            border-radius: 15px;
+        }
+        p {
+            text-align: center;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 150px;
+            width: 150px;
+            background: url('../../../up-arrow.png') no-repeat center;
+            opacity: 0;
+            z-index: 2;
+        }
+
+        &:hover {
+            img {
+                opacity: 0.2;
+            }
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}

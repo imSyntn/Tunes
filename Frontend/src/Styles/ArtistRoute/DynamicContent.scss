@@ -1,0 +1,26 @@
+.DynamicContent {
+    >.albumCont {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 150px);
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+
+    >.load {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+
+        >button {
+            background: none;
+            border: 2px solid #2bc5b4;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            height: 35px;
+            width: 120px;
+            cursor: pointer;
+        }
+    }
+}

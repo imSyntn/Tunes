@@ -1,0 +1,64 @@
+.SavedData {
+    >h2 {
+        margin-bottom: 20px;
+    }
+    >.data {
+        height: fit-content;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 150px);
+        gap: 20px;
+        // justify-content: space-between;
+        overflow: hidden;
+        position: relative;
+        padding-block: 10px;
+
+        >.noData {
+            position: absolute;
+            width: 100%;
+            color: #2bc5b4;
+            text-align: center;
+        }
+    }
+    >.load {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-block: 40px 15px;
+
+        >button {
+            background: none;
+            border: 2px solid #2bc5b4;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            height: 35px;
+            width: 120px;
+            position: relative;
+                overflow: hidden;
+                z-index: 2;
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #2bc5b4;
+                z-index: -1;
+                transition: all 0.3s;
+            }
+
+            &:hover {
+                color: black;
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

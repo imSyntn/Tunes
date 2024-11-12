@@ -1,0 +1,47 @@
+.PlaylistThumbnail {
+    display: flex;
+    margin: 20px 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    height: 170px;
+    overflow: hidden;
+    cursor: pointer;
+
+    >.imgWrapperInPlaylistThumbnail {
+        position: relative;
+
+        img {
+            width: 150px;
+            height: 150px;
+            z-index: 1;
+            border: none;
+            border-radius: 15px;
+        }
+
+        &::before {
+            content: '';
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background: url('../../up-arrow.png') no-repeat center;
+            opacity: 0;
+            z-index: 2;
+        }
+    }
+
+    &:hover {
+        >.imgWrapperInPlaylistThumbnail {
+            img {
+                opacity: 0.3;
+            }
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
