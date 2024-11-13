@@ -1,5 +1,7 @@
 ![Tunes](https://raw.githubusercontent.com/imSyntn/tttt/refs/heads/main/Screenshot_2024-11-12_235056-removebg-preview.png)
 
+![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
+
 Tunes is a music streaming web app. It offers users the ability to explore, play, and manage songs seamlessly with features such as lyrics, volume control, and looping. The app includes a backend powered by Node.js and Express, with MongoDB for database management and user authentication, and Redis for caching.
 ## Features
 
