@@ -1,51 +1,40 @@
-# React + TypeScript + Vite
+![Tunes](https://raw.githubusercontent.com/imSyntn/tttt/refs/heads/main/Screenshot_2024-11-12_235056-removebg-preview.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Frontend
 
-Currently, two official plugins are available:
+![](https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+Tunes is a music streaming web app. It offers users the ability to explore, play, and manage songs seamlessly with features such as lyrics, volume control, and looping. The app includes a backend powered by Node.js and Express, with MongoDB for database management and user authentication, and Redis for caching.
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Audio Selection:** Browse and play a wide range of songs fetched using the Spotify API.
+- **Lyrics:** View song lyrics in real-time for a more immersive listening experience.
+- **Volume Management:** Fine-tune the volume for optimal listening.
+- **Looping and Song Management:** Control playback with loop features and manage your songs easily.
+- **Liked Playlists, Albums, and Songs:** Save your favorite playlists, albums, and songs to easily access them later.
+- **Previous/Next Song Controls:** Seamlessly switch between songs using intuitive previous and next controls.
+- **User Authentication:** Secure user registration and login using MongoDB for storage and JWT for token-based authentication.
+- **Caching with Redis:** Improve performance and reduce load times by caching data for faster access.
+- **Backend Services:** A backend server with API endpoints for data management, user operations, and music content.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tech Stack
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- React
+- TypeScript
+- Sass
+- framer-motion
+- react-icons
+- react-router-dom
+- framer motion
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# Tunes
+
+## Contact
+
+- **Gmail:** [imsyntn@gmail.com](imsyntn@gmail.com)
+- **Linkedin:**  [Linkedin](https://www.linkedin.com/in/imsyntn)
+- **Twitter:** [Twitter](https://x.com/imsyntn)
+
+Happy coding!🚀
