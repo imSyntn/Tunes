@@ -20,6 +20,9 @@ Tunes is a music streaming web app. It offers users the ability to explore, play
 
 - **Server:** Node.js, Express, MongoDB (via Mongoose), JWT (for authentication), Redis (for caching)
 
+## Prerequisites
+
+- Docker
 
 
 ## Run Locally
@@ -27,25 +30,21 @@ Tunes is a music streaming web app. It offers users the ability to explore, play
 - Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/imSyntn/Tunes.git
 ```
 
 - Go to the project directory
 
 ```bash
-  cd my-project
+  cd Tunes
 ```
 
-- Install dependencies
-
-```bash
-  npm install
-```
+- Start docker in background
 
 - Start the server
 
 ```bash
-  npm run start
+  docker compose up
 ```
 
 
