@@ -106,6 +106,11 @@ export default defineConfig({
     ViteImageOptimizer(DEFAULT_OPTIONS),
     VitePWA(manifestForPlugIn)
   ],
+  server: {
+    proxy: {
+      '/api': 'http://data:3000'
+    }
+  },
   css: {
     postcss: './postcss.config.js'
   }

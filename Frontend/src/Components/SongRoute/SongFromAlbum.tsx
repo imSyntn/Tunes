@@ -6,7 +6,7 @@ import { memo } from 'react';
 
 const SongFromAlbum = ({id, currentSongId}: {id:string, currentSongId:string}) => {
 
-    const fetchUrl = `${import.meta.env.VITE_DATA_URL}/api/albums?id=${id}`;
+    const fetchUrl = `/api/albums?id=${id}`;
     const { loading, error, data } = useFetch(fetchUrl);
 
     const navigate = useNavigate()

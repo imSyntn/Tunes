@@ -10,7 +10,7 @@ const NewReleases = () => {
     //     error: false
     // })
 
-    const { loading, error, data } = useFetch(`${import.meta.env.VITE_BACKEND_URL}/api/new-releases`)
+    const { loading, error, data } = useFetch(`http://localhost:8000/api/new-releases`)
 
     if (loading) return <Loader />
 

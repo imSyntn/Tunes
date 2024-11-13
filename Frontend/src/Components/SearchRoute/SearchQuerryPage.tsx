@@ -23,7 +23,7 @@ const SearchQuerryPage = () => {
     const [page, setPage] = useState<number>(1)
     const [totalData, setTotalData] = useState<ResultsInDataType[] | []>([])
 
-    const fetchUrl = `${import.meta.env.VITE_DATA_URL}/api/search/${searchType}?query=${querry}&page=${page}&limit=50`;
+    const fetchUrl = `/api/search/${searchType}?query=${querry}&page=${page}&limit=50`;
     const { loading, error, data } = useFetch(fetchUrl)
 
 

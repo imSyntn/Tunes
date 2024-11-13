@@ -51,7 +51,7 @@ const Header = () => {
             setResOptions(prev => ({ ...prev, loading: true }))
             if (inputText) {
                 try {
-                    const req = await fetch(`${import.meta.env.VITE_DATA_URL}/api/search?query=${inputText}`)
+                    const req = await fetch(`/api/search?query=${inputText}`)
                     const res = await req.json()
                     setData(res.data)
                 } catch (error: any) {

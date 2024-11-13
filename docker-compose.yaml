@@ -1,0 +1,32 @@
+services:
+
+  frontend:
+    build: 
+      context: ./Frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+      - data
+
+  backend:
+    build: 
+      context: ./Backend
+    environment:
+      - SECRET_KEY=00000
+    depends_on:
+      - mongodb
+      - redis
+    ports:
+      - "8000:8000"
+
+  data:
+    image: imsyntn/tunes-data:data
+    ports:
+      - "3000:3000"
+
+  mongodb:
+    image: mongo:latest
+
+  redis:
+    image: redis:latest

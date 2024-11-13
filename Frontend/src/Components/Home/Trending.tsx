@@ -4,7 +4,7 @@ import Loader from '../Loader'
 
 const Trending = () => {
 
-    const { loading, error, data } = useFetch(`${import.meta.env.VITE_BACKEND_URL}/api/trending-now`)
+    const { loading, error, data } = useFetch(`http://localhost:8000/api/trending-now`)
 
     if(loading) return <Loader />
 

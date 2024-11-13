@@ -26,7 +26,7 @@ const Heart = ({ user, setUser, result, type }: { user: userType, setUser: React
         e.stopPropagation()
         if (user.loggedIn) {
             try {
-                const req = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/data`, {
+                const req = await fetch(`http://localhost:8000/api/user/data`, {
                     method: 'POST',
                     headers: {
                         "Content-Type": "application/json", "Access-Control-Allow-Origin": "*",

@@ -15,7 +15,7 @@ const LoginSignup = ({ userRegistered, userLoggedIn }: { userRegistered: () => v
 
     const handleUserAction = async (e: any) => {
         e.preventDefault()
-        const baseUrl = uiData.login ? `${import.meta.env.VITE_BACKEND_URL}/api/user/login` : `${import.meta.env.VITE_BACKEND_URL}/api/user`
+        const baseUrl = uiData.login ? `http://localhost:8000/api/user/login` : `http://localhost:8000/api/user`
         try {
             const req = await fetch(baseUrl, {
                 method: 'POST',

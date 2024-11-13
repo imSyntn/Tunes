@@ -15,7 +15,7 @@ const { errorMiddleware } = require('./Middleware/ErrorMiddleware');
 const app = express();
 dotEnv.config()
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect('mongodb://mongodb:27017/user')
     .then(() => console.log('MongoDB connected.'))
     .catch(e => console.log(e))
 
@@ -39,10 +39,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
 
-const req_origin = process.env.CURRNET_MODE === 'dev' ? 'http://localhost:5173' : process.env.ORIGIN
+// const req_origin = process.env.CURRNET_MODE === 'dev' ? 'http://localhost:5173' : process.env.ORIGIN
 
 app.use(cors({
-    origin: req_origin,
+    origin: true,
     credentials: true
 }));
 

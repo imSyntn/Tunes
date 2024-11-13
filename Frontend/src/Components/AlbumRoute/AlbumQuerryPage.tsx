@@ -19,7 +19,7 @@ const AlbumQuerryPage = () => {
   // }
   const { setTracks } = useAppContext();
 
-  const fetchUrl = `${import.meta.env.VITE_DATA_URL}/api/albums?id=${id}`;
+  const fetchUrl = `/api/albums?id=${id}`;
   const { loading, error, data } = useFetch(fetchUrl);
   // const loading = true;
   if (loading) return <Loader />;

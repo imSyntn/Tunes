@@ -21,7 +21,7 @@ export function blockDevtools () {
 }
 
 export const handleAutoLogin = async (setUser: setUserType) => {
-    const baseUrl = `${import.meta.env.VITE_BACKEND_URL}/api/user/login`
+    const baseUrl = `http://localhost:8000/api/user/login`
     try {
       const req = await fetch(baseUrl, {
         method: 'POST',
@@ -43,7 +43,7 @@ export const handleAutoLogin = async (setUser: setUserType) => {
 
   export const fetchUserData = async (setUser: setUserType) => {
     try {
-      const req = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/data`, {
+      const req = await fetch(`http://localhost:8000/api/user/data`, {
         method: 'GET',
         credentials: 'include',
         headers: {

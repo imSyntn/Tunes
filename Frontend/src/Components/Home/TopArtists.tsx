@@ -7,7 +7,7 @@ import Loader from '../Loader'
 
 const TopArtists = () => {
 
-  const { loading, error, data } = useFetch(`${import.meta.env.VITE_BACKEND_URL}/api/top-artists`)
+  const { loading, error, data } = useFetch(`http://localhost:8000/api/top-artists`)
 
   const navigate = useNavigate()
 

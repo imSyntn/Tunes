@@ -19,7 +19,7 @@ const PlaylistQuerryPage = () => {
     // }
     const { setTracks } = useAppContext();
 
-    const fetchUrl = `${import.meta.env.VITE_DATA_URL}/api/playlists?id=${id}&limit=100`
+    const fetchUrl = `/api/playlists?id=${id}&limit=100`
     const { loading, error, data } = useFetch(fetchUrl)
 
     if (loading) {

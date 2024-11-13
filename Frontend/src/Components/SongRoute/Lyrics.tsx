@@ -6,7 +6,7 @@ const Lyrics = ({ id }: { id: string }) => {
 
     const [showFullLyrics, setShowFullLyrics] = useState(false)
 
-    const fetchUrl = `${import.meta.env.VITE_DATA_URL}/api/songs/${id}/lyrics`;
+    const fetchUrl = `/api/songs/${id}/lyrics`;
     const { loading, error, data } = useFetch(fetchUrl);
 
     return (
