@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { memo, useState } from 'react'
 import { useAppContext } from '../../Context/ContextProvider'
 import '../../Styles/User/UserData.scss'
 import SavedData from './SavedData'
@@ -8,13 +8,16 @@ import SavedData from './SavedData'
 const UserData = ({ userLoggedOut }: { userLoggedOut: () => void }) => {
 
   const {user} = useAppContext()
-
+  const [logout, setlogout] = useState(false)
 
   return (
     <div className='UserData'>
       <div className="top">
         <h1>Hello<span>!</span></h1>
-        <button onClick={userLoggedOut}>Logout</button>
+        <button onClick={()=> {
+          userLoggedOut()
+          setlogout(true)
+        }} style={logout ? {opacity: 0.6} : {}}>Logout</button>
       </div>
       {
         (user.userSavedData && 'songs' in user.userSavedData) && (

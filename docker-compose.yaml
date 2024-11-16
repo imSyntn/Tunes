@@ -5,6 +5,9 @@ services:
       context: ./Frontend
     ports:
       - "5173:5173"
+    # volumes:
+    #   - PATH_OF_FRONTEND_FOLDER:/Frontend
+    #   - /Frontend/node_modules
     depends_on:
       - backend
       - data
@@ -14,6 +17,9 @@ services:
       context: ./Backend
     environment:
       - SECRET_KEY=00000
+    # volumes:
+    #   - PATH_OF_BACKEND_FOLDER:/Backend
+    #   - /Backend/node_modules
     depends_on:
       - mongodb
       - redis

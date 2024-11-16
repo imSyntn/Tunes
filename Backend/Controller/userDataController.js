@@ -13,6 +13,8 @@ const storeData = asyncHandler(async (req, res) => {
     const { id } = req.jwtPayload;
     const { playlists, albums, songs } = req.body;
 
+    console.log(songs)
+
     let removed = false;
 
     const userData = await UserDataModel.findOne({userId: id})

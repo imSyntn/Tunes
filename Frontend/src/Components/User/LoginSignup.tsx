@@ -6,7 +6,8 @@ const LoginSignup = ({ userRegistered, userLoggedIn }: { userRegistered: () => v
     const [uiData, setUiData] = useState({
         password: false,
         login: false,
-        msg: ''
+        msg: '',
+        fetched: false
     })
     const [userInfo, setUserInfo] = useState({
         email: '',
@@ -15,6 +16,7 @@ const LoginSignup = ({ userRegistered, userLoggedIn }: { userRegistered: () => v
 
     const handleUserAction = async (e: any) => {
         e.preventDefault()
+        setUiData((prev: any) => ({ ...prev, fetched: true }))
         const baseUrl = uiData.login ? `http://localhost:8000/api/user/login` : `http://localhost:8000/api/user`
         try {
             const req = await fetch(baseUrl, {
@@ -43,12 +45,14 @@ const LoginSignup = ({ userRegistered, userLoggedIn }: { userRegistered: () => v
             console.log(res)
         } catch (error) {
             console.log(error)
+        } finally {
+            setUiData((prev: any) => ({ ...prev, fetched: false }))
         }
     }
 
     return (
         <div className='LoginSignup'>
-            <div className="form-container">
+            <div className="form-container" style={uiData.fetched ? {opacity: 0.6} : {}}>
                 <p className="title">{uiData.login ? 'Login' : 'Signup'}</p>
 
                 <p className='error'>{uiData.msg}</p>
@@ -71,7 +75,9 @@ const LoginSignup = ({ userRegistered, userLoggedIn }: { userRegistered: () => v
                     <button onClick={() => setUiData(prev => ({ ...prev, login: !uiData.login }))}>{uiData.login ? 'Signup' : 'Login'}</button>
                 </p>
             </div>
+
             <img src="../../../login.svg" alt="" />
+
         </div>
     )
 }

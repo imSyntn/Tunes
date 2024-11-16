@@ -23,6 +23,7 @@ const Heart = ({ user, setUser, result, type }: { user: userType, setUser: React
 
 
     const addToLiked = async (e: any) => {
+        console.log(result)
         e.stopPropagation()
         if (user.loggedIn) {
             try {
@@ -36,7 +37,7 @@ const Heart = ({ user, setUser, result, type }: { user: userType, setUser: React
                         [type + 's']: {
                             dataId: result.id,
                             type: result.type,
-                            title: result.title,
+                            title: result.name,
                             image: result.image?.[1]?.url
                         }
                     }),

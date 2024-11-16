@@ -29,6 +29,7 @@ const Player = () => {
     const { tracks, setCurrentSongObj, songIndex, setSongIndex, setLimitExceed } = useAppContext();
 
     const audioRef = useRef<HTMLAudioElement>(null)
+    const LoadRef = useRef(false)
     // const trackListMomo = useRef<ResultsInDataType[] | null>(null)
 
     const [isPlaying, setIsPlaying] = useState(false)
@@ -74,8 +75,17 @@ const Player = () => {
     useEffect(() => {
         if (tracks.length != 0) {
             setCurrentSongObj(tracks[songIndex])
+            if(LoadRef.current) {
+                setIsPlaying(true)
+            }
         }
     }, [songIndex, tracks])
+
+    useEffect(()=> {
+        setTimeout(()=> {
+            LoadRef.current = true;
+        },200)
+    }, [])
 
     const currentTimeOfAudio = () => {
         const CTime = audioRef.current?.currentTime || 0;
